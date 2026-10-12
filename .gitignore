@@ -1,0 +1,12 @@
+Prompt/__pycache__/
+out_srrg_maplez/
+Qwen3.8-27B/
+__pycache__/
+
+*.json
+*.csv
+*.log
+*.jsonl
+# 판독문 원문이 들어 있다 (MIMIC 재배포 금지)
+out_srrg_qwen/
+out_srrg_*/
