@@ -1,0 +1,10 @@
+Prompt/__pycache__/
+__pycache__/
+out_parse/
+out_spec/
+MD/
+
+*.json
+*.csv
+*.log
+*.jsonl
