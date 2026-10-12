@@ -1,0 +1,31 @@
+# 데이터는 git 이 아니라 백업 + 체크섬으로 관리한다 (778MB).
+# 백업: /data3/backup/ReportCXR-Ko/  · 매니페스트: 각 백업의 SHA256SUMS
+jsonl/
+
+# 명세와 설계 문서. 저장소에 두되 추적하지 않는다.
+docs/
+
+# RadLex 원본 OWL (83MB) 은 추적하지 않는다. RSNA 에서 받는다.
+# 파생 테이블 RadLex/radlex_terms.tsv 는 추적한다 (재현에 필요하고 작다).
+*.owl
+
+# out/ 는 생성물 자리다. **추적하지 않는다.**
+# 판독문 원문(MIMIC-CXR / CheXpert)이 그대로 들어 있고, MIMIC 은 PhysioNet
+# 자격 인증 데이터라 비인증자에게 재배포할 수 없다. 공개 원격에 올라가서는
+# 안 된다. 로컬과 /data3/backup/ 에만 둔다.
+out/*
+!out/README.md
+out_parse/
+*.tmp
+
+# A/B 표본도 판독문 원문 64문장이다 (build_sample.py 가 seed 20260907 로
+# 결정적으로 다시 만든다).
+Prompt2/ab/sample.jsonl
+
+__pycache__/
+*.pyc
+*.swp
+.DS_Store
+
+# 검수 시트에 판독문 원문이 들어 있다 (MIMIC 재배포 금지). 로컬에만 둔다.
+GPT/sheet_*_labeled.tsv
